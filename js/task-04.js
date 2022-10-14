@@ -6,10 +6,10 @@ const increaseBtnEl = document.querySelector('#counter').lastElementChild;
 
 let counterValue = 0;
 
-increaseBtnEl.addEventListener('click', (event)=>{
-    counterEl.textContent = `${counterValue+=1}`;
+increaseBtnEl.addEventListener('click', event => {
+  counterEl.textContent = `${counterValue++}`;
 });
 
-decreaseBtnEl.addEventListener('click', (event)=>{
-    counterEl.textContent = `${counterValue-=1}`;
+decreaseBtnEl.addEventListener('click', event => {
+  counterEl.textContent = `${counterValue--}`;
 });

@@ -16,17 +16,17 @@ const images = [
 ];
 
 const galleryEl = document.querySelector('.gallery');
-galleryEl.style = 'display: flex; column-gap: 50px; list-style: none; align-items: flex-end;'
+galleryEl.style =
+  'display: flex; column-gap: 50px; list-style: none; align-items: flex-end;';
 
-
-const makeGalleryCard = ({url, alt} = {}) =>{
+const makeGalleryCard = ({ url, alt } = {}) => {
   return `<li class="gallery__item">
-  <img src="${url}" alt="${alt}" width = "300"  heigth = "300">
+  <img src="${url}" alt="${alt}" width = "300"  height = "200">
 </li>`;
-}
+};
 
 const cardsArr = images.map(el => {
   return makeGalleryCard(el);
-})
+});
 
-galleryEl.insertAdjacentHTML("beforeend", cardsArr.join(''));
+galleryEl.insertAdjacentHTML('beforeend', cardsArr.join(''));

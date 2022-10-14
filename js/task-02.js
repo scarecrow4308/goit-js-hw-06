@@ -10,13 +10,13 @@ const ingredients = [
 ];
 
 const ingredientsEl = document.querySelector('#ingredients');
+const itemsarr = [];
 
-const ingredientsItems = ingredients.forEach(el =>{
+ingredients.forEach(el => {
   const itemEl = document.createElement('li');
- itemEl.classList.add('item');
-//  const itemTitleEl = document.createElement('span');
-//  itemTitleEl.textContent = el;
-//  itemEl.append(itemTitleEl);
-itemEl.textContent = el;
-ingredientsEl.append(itemEl);
-})
+  itemEl.classList.add('item');
+  itemEl.textContent = el;
+  itemsarr.push(itemEl);
+});
+
+ingredientsEl.append(...itemsarr);
