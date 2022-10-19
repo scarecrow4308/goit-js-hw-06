@@ -1,5 +1,3 @@
-'use strict';
-
 const formEl = document.querySelector('.login-form');
 
 const formBtnEL = document.querySelector('button');
@@ -14,7 +12,8 @@ class UserType {
 formEl.addEventListener('submit', event => {
   event.preventDefault();
   const { email, password } = event.target.elements;
-  if (email.value === '' || password.value === '') {
+
+  if (!email.value || !password.value) {
     return alert('Fill in the gaps!');
   }
 
